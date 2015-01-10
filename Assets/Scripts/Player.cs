@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	public Texture2D crosshair;
-
+    public GameObject impact;
 	void Start () {
 		
 	}
@@ -16,7 +16,12 @@ public class Player : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit)) {
 				if (hit.collider.GetComponent<Bird>()) {
-					GameObject.Destroy(hit.collider.gameObject);
+                    GameObject go = hit.collider.gameObject;
+
+                    GameObject newEffect = (GameObject)Instantiate(impact);
+                    newEffect.transform.position = go.transform.position + Vector3.up * 0.2f;
+                  
+                    GameObject.Destroy(hit.collider.gameObject,0.1f);
 				}
 			}
 		}
