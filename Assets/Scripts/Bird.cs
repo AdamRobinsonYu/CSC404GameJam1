@@ -12,6 +12,6 @@ public class Bird : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position += Vector3.up * Time.deltaTime * this.speed;
+		this.transform.position += Vector3.right * Time.deltaTime * this.speed;
 	}
 }
