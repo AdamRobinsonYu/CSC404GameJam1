@@ -29,6 +29,6 @@ public class Bird : Enemy {
 
     void SinCurve()
     {
-        this.transform.position += Vector3.right * Time.deltaTime * this.speed + new Vector3(0, Mathf.Sin(Time.time), 0.0f);
+        this.transform.position += Vector3.right * Time.deltaTime * this.speed + new Vector3(0, Mathf.Sin(Time.time), 0.0f)*2* Time.deltaTime;
     }
 }
