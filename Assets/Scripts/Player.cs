@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
             {
 
               
-                if (hit.collider.GetComponent<Bird>())
+                if (hit.collider.GetComponent<Enemy>())
                 {
                     GameObject go = hit.collider.gameObject;
 
