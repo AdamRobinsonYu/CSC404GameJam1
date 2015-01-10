@@ -15,8 +15,8 @@ public class Player : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit)) {
-				if (hit.collider.GetComponent<Bird>()) {
-					GameObject.Destroy(hit.collider.gameObject);
+				if (hit.collider.GetComponent<Enemy>()) {
+					hit.collider.GetComponent<Enemy>().Damage(1);
 				}
 			}
 		}

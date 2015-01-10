@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fox : MonoBehaviour {
+public class Fox : Enemy {
 
 	// Use this for initialization
 	void Start () {

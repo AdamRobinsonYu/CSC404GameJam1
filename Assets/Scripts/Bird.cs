@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bird : MonoBehaviour {
+public class Bird : Enemy {
 
 	public float speed;
     public MovementState state = MovementState.Straight;
+
 	// Use this for initialization
-	void Start () {
-	
+	void Start () {	
 
 	}
 	
