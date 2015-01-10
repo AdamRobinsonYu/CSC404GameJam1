@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CameraShake : MonoBehaviour {
 
+    public float duration = 0.5f;
 	// Use this for initialization
 	void Start () {
 	
@@ -13,11 +14,11 @@ public class CameraShake : MonoBehaviour {
 	
 	}
 
-	static void shake {
-		StartCoroutine(WaitAndPrint(2.0F));
+	 void shake (){
+		StartCoroutine(Shake());
 	}
 
-	IEnumerator Shake() {
+	 IEnumerator Shake() {
 		
 		float elapsed = 0.0f;
 		
