@@ -4,7 +4,7 @@ using System.Collections;
 public class Bird : MonoBehaviour {
 
 	public float speed;
-
+    public MovementState state = MovementState.Straight;
 	// Use this for initialization
 	void Start () {
 	
