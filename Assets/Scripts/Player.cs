@@ -5,14 +5,16 @@ public class Player : MonoBehaviour {
 
 	public Texture2D crosshair;
     public GameObject impact;
-
+    static int score = 0;
+    public UILabel scoreUI;
 	void Start () {
-		
+        scoreUI.text = score.ToString();
 	}
 	
 	// Update is called once per frame
     void Update()
     {
+        scoreUI.text = score.ToString();
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour {
                     if (hit.collider.GetComponent<Enemy>())
                     {
                         hit.collider.GetComponent<Enemy>().Damage(1);
+                        score++;
 
                     }
                 }
