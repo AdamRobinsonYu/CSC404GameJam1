@@ -18,7 +18,6 @@ public class BirdSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.timer -= Time.deltaTime;
-		Debug.Log(this.timer);
 		if (this.timer <= 0) {
 			this.timer = this.timeoutPeriod;
 			GameObject newBird = (GameObject)GameObject.Instantiate(birdPrefab);

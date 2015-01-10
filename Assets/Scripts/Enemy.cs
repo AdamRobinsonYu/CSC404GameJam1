@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour {
 	
 	}
 
-	void Damage(int damage) {
+	public void Damage(int damage) {
 		this.health -= damage;
 		if (this.health <= 0) {
 			this.Die();
@@ -23,6 +23,6 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void Die() {
-
+		GameObject.Destroy(this.gameObject);
 	}
 }

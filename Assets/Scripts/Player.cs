@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit)) {
+<<<<<<< HEAD
 				if (hit.collider.GetComponent<Bird>()) {
                     GameObject go = hit.collider.gameObject;
 
@@ -22,6 +23,10 @@ public class Player : MonoBehaviour {
                     newEffect.transform.position = go.transform.position + Vector3.up * 0.2f;
                   
                     GameObject.Destroy(hit.collider.gameObject,0.1f);
+=======
+				if (hit.collider.GetComponent<Enemy>()) {
+					hit.collider.GetComponent<Enemy>().Damage(1);
+>>>>>>> 18235ac4704ab22e7a8c4e0b67c1a2b1a402a0a4
 				}
 			}
 		}
